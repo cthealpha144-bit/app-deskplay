@@ -1,20 +1,31 @@
 {
-  "name": "app-deskplay",
+  "name": "deskplay-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "build": {
+    "appId": "com.deskplay.app",
+    "productName": "Deskplay",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "cthealpha144-bit",
+        "repo": "app-deskplay"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  },
   "devDependencies": {
-    "electron": "^43.4.0",
-    "electron-builder": "^26.15.3"
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
   },
   "dependencies": {
-    "electron-updater": "^6.8.9"
+    "electron-updater": "^6.0.0"
   }
 }
