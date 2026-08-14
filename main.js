@@ -19,7 +19,7 @@ function createWindow() {
     },
   });
 
-  mainWindow.setMenuBar(null);
+  mainWindow.setMenuBarVisibility(false);
 
   mainWindow.loadFile("displays.html");
 }
