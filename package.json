@@ -1,15 +1,15 @@
 {
   "name": "deskplay-app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "main.js",
-  "author": "chris",
-  "description": "A desktop application for Deskplay",
+  "author": "cstuartday@gmail.com",
+  "description": "DeskPlay desktop application",
   "scripts": {
     "start": "electron ."
   },
   "build": {
     "appId": "com.deskplay.app",
-    "productName": "Deskplay",
+    "productName": "DeskPlay",
     "publish": [
       {
         "provider": "github",
