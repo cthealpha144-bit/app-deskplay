@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle at top right, #140029 0%, #000000 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-container {
+  flex: 1;
+  padding: 40px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.dock-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+.dock {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dock-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dock-btn:hover {
+  color: white;
+  transform: translateY(-3px);
+}
+
+.dock-btn.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.dock-btn svg {
+  width: 28px;
+  height: 28px;
+}
+
+.watermark {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.settings-card {
+  width: 50%;
+  align-self: center;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
