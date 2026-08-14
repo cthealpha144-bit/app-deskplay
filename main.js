@@ -34,3 +34,9 @@ app.whenReady().then(() => {
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
 });
+
+// Automatically install and restart when an update is ready
+autoUpdater.on("update-downloaded", () => {
+  // Gracefully quit the app and run the installer immediately
+  autoUpdater.quitAndInstall(false, true);
+});
