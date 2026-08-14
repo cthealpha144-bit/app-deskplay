@@ -11,12 +11,15 @@ function createWindow() {
     minWidth: 725,
     minHeight: 500,
     resizable: true,
+    title: "DeskPlay",
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       contextIsolation: true,
       nodeIntegration: false,
     },
   });
+
+  mainWindow.setMenuBar(null);
 
   mainWindow.loadFile("displays.html");
 }
