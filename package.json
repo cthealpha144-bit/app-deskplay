@@ -1,7 +1,9 @@
 {
   "name": "deskplay-app",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "main.js",
+  "author": "chris",
+  "description": "A desktop application for Deskplay",
   "scripts": {
     "start": "electron ."
   },
