@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Deskplay</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="settings.js"></script>
   </head>
   <body>
     <main class="content-container">
@@ -12,6 +13,16 @@
 <div class="settings-card">
     <p>Deskplay Version: <span id="app-version">Loading...</span></p>
   </div>
+  <div class="settings-buttons">
+<div class="github-card">
+  <a color="white" style="color: white; text-decoration: none;" href="https://github.com/cthealpha144-bit/app-deskplay" target="_blank" rel="noopener noreferrer">
+    GitHub Repository
+  </a>
+</div>
+  <a class="github-card" id="checkUpdates" onclick="checkForUpdates()" >
+    Check for Updates
+  </a>
+</div>
 </main>
 
 <script>

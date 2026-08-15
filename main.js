@@ -26,9 +26,44 @@ function createWindow() {
 
 ipcMain.handle("get-app-version", () => app.getVersion());
 
+ipcMain.handle("check-for-updates", async () => {
+  try {
+    const result = await autoUpdater.checkForUpdates();
+
+    if (!result || !result.updateInfo) {
+      return {
+        status: "up-to-date",
+        version: app.getVersion(),
+      };
+    }
+
+    const latestVersion = result.updateInfo.version;
+
+    if (latestVersion === app.getVersion()) {
+      return {
+        status: "up-to-date",
+        version: app.getVersion(),
+      };
+    }
+
+    return {
+      status: "update-available",
+      version: latestVersion,
+    };
+  } catch (error) {
+    console.error("Update check failed:", error);
+
+    return {
+      status: "error",
+      message: error.message,
+    };
+  }
+});
+
 app.whenReady().then(() => {
   createWindow();
 
+  // Automatically check when DeskPlay starts
   autoUpdater.checkForUpdatesAndNotify();
 });
 

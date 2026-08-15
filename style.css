@@ -81,7 +81,7 @@ body {
   bottom: 15px;
   right: 20px;
   font-size: 10px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.6);
   font-weight: 600;
 }
 
@@ -99,6 +99,37 @@ body {
 .settings-card {
   width: 50%;
   align-self: center;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+.watermark {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.settings-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.github-card {
+  width: 20%;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: white;
   background: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(10px);
   padding: 20px;
