@@ -1,3 +1,4 @@
+// Script for loading the navbar into each page - injected into each HTML File.
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("navbar-container");
   if (!container) return;
