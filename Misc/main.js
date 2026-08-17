@@ -18,7 +18,7 @@ function createWindow() {
     },
   });
 
-  mainWindow.loadFile("displays.html");
+  mainWindow.loadFile("Pages/Display Page/displays.html");
 }
 
 ipcMain.handle("get-app-version", () => app.getVersion());
