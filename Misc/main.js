@@ -23,7 +23,6 @@ function createWindow() {
     },
   });
   mainWindow.removeMenu();
-  mainWindow.webContents.openDevTools();
   mainWindow.loadFile("Pages/Display Page/displays.html");
 }
 
