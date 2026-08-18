@@ -75,9 +75,6 @@ function renderUI(monitors) {
 function openSettingsForMonitor(monitor, panel) {
   panel.classList.remove("hidden");
   panel.innerHTML = `
-    <div class="panel-header">
-      <h2>Settings for ${monitor.Name}</h2>
-    </div>
     <div class="controls-list" id="controls-list"></div>
   `;
 
