@@ -17,7 +17,7 @@ function createWindow() {
       nodeIntegration: false,
     },
   });
-
+  mainWindow.removeMenu();
   mainWindow.loadFile("Pages/Display Page/displays.html");
 }
 
