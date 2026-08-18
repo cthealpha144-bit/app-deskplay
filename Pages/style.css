@@ -88,3 +88,50 @@ body {
     transform: translateY(0);
   }
 }
+
+.monitor-grid {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.monitor-card {
+  background-color: #313244;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 16px;
+  width: 200px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.monitor-card:hover {
+  background-color: #45475a;
+  transform: translateY(-2px);
+}
+
+.monitor-card.active {
+  border-color: #89b4fa;
+  background-color: #45475a;
+}
+
+/* Settings Panel */
+.settings-panel {
+  background-color: #1e1e2e;
+  border: 1px solid #45475a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.settings-panel.hidden {
+  display: none;
+}
+
+.control-group {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
