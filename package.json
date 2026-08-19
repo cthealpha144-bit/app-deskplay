@@ -1,7 +1,7 @@
 {
   "name": "deskplay-app",
   "version": "5.0.0",
-  "main": "C:\\Users\\chris\\Desktop\\app-deskplay\\Misc\\main.js",
+  "main": "Misc/main.js",
   "author": "cstuartday@gmail.com",
   "description": "DeskPlay desktop application",
   "scripts": {
@@ -10,6 +10,12 @@
   "build": {
     "appId": "com.deskplay.app",
     "productName": "DeskPlay",
+    "extraResources": [
+      {
+        "from": "DisplaysDetector.exe",
+        "to": "DisplaysDetector.exe"
+      }
+    ],
     "publish": [
       {
         "provider": "github",
