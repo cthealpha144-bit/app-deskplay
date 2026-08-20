@@ -16,7 +16,7 @@ function createWindow() {
     minWidth: 725,
     minHeight: 500,
     resizable: true,
-    icon: path.join(__dirname, "favicon.png"),
+    icon: path.join(__dirname, "../favicon.png"),
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       contextIsolation: true,
