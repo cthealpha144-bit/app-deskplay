@@ -5,11 +5,18 @@
   "author": "cstuartday@gmail.com",
   "description": "DeskPlay desktop application",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "build": {
     "appId": "com.deskplay.app",
     "productName": "DeskPlay",
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        "nsis"
+      ]
+    },
     "extraResources": [
       {
         "from": "DisplaysDetector.exe",
@@ -22,12 +29,7 @@
         "owner": "cthealpha144-bit",
         "repo": "app-deskplay"
       }
-    ],
-    "win": {
-      "target": [
-        "nsis"
-      ]
-    }
+    ]
   },
   "devDependencies": {
     "electron": "^28.0.0",
